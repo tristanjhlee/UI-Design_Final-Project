@@ -1,0 +1,2 @@
+document.test("test", function () {
+});
