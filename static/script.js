@@ -1,2 +1,0 @@
-document.test("test", function () {
-});
