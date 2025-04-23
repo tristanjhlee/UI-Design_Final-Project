@@ -2,9 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import json
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Replace in production
 
-# ---------- Quiz 라우터 ----------
+# Quiz 
 
 @app.route('/')
 def home():
@@ -44,7 +43,7 @@ def quiz(quiz_num):
     else:
         return "Unsupported quiz type", 400
 
-# ---------- 퀴즈 제출 라우터 ----------
+# Quiz Submit
 
 @app.route('/submit_quiz/<int:quiz_num>', methods=['POST'])
 def submit_quiz(quiz_num):
@@ -119,12 +118,9 @@ def submit_quiz(quiz_num):
         session['selected_images'] = option["images"]
         return redirect(url_for('result5'))
 
-
-
-
     return "Unsupported submission type", 400
 
-# ---------- 결과 페이지 ----------
+# Result
 
 @app.route('/result')
 def result():
@@ -146,14 +142,10 @@ def result4():
 def result5():
     return render_template('result5.html', brands=session.get('selected_brands'), images=session.get('selected_images', []))
 
-
-# ---------- log-page-enter 처리 ----------
-
 @app.route('/log-page-enter', methods=['POST'])
 def log_page_enter():
     print("Page enter log:", request.json)
     return '', 204
 
-# ---------- 메인 실행 ----------
 if __name__ == '__main__':
     app.run(port=5001, debug=True)

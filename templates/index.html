@@ -8,10 +8,8 @@
 </head>
 <body>
 
-<!-- Include Navbar -->
 {% include 'navbar.html' %}
 
-<!-- Main Content -->
 <div class="container text-center mt-5">
     <h1 class="mb-4">Get Your First Car RIGHT NOW!</h1>
 
@@ -19,7 +17,6 @@
         <img src="https://www.autoroom.com/static/dealer-25212/homepage/carselectionEdit-01.jpg" 
              alt="Car Selection" class="img-fluid mb-3" style="max-height: 400px;">
 
-        <!-- Start Button 바로 이미지 밑에 -->
         <a href="{{ url_for('learn', lesson_num=1) }}">
             <button class="btn btn-primary btn-lg">Start</button>
         </a>

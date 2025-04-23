@@ -34,7 +34,7 @@
     </div>
 
     {% elif lesson["title"] == "Car Type" %}
-    <!-- Car Type Page Layout -->
+
     <div class="row text-center justify-content-center">
         {% for topic in lesson["topics"] %}
         <div class="col-md-4 d-flex flex-column align-items-center mb-5">
@@ -56,7 +56,7 @@
     </div>
 
     {% elif lesson["title"] == "Fuel Type" %}
-    <!-- Fuel Type Page Layout -->
+
     <div class="table-responsive">
         <table class="table table-bordered text-center align-middle">
             <thead class="table-light">
@@ -91,7 +91,7 @@
     </div>
 
     {% elif lesson["title"] == "Safety Features" %}
-    <!-- Safety Features Page Layout (from JSON) -->
+
     <div class="row align-items-center">
         <div class="col-md-6 text-center">
             <img src="{{ lesson.image }}" alt="Safety Features Diagram" class="img-fluid" style="max-height: 400px;">
@@ -105,7 +105,7 @@
     </div>
     
     {% elif lesson["title"] == "Design & Interior" %}
-    <!-- Design & Interior Page Layout -->
+
     <div class="row row-cols-1 row-cols-md-4 g-4 text-center">
         {% for topic in lesson.topics %}
         <div class="col">
@@ -140,7 +140,7 @@
     </div>
     {% else %}
     <div class="alert alert-warning text-center mt-5">
-        <strong>Oops!</strong> No quiz connected to this lesson.
+        No quiz connected to this lesson.
     </div>
     {% endif %}
 </div>
