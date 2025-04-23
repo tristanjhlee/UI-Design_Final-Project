@@ -1,0 +1,130 @@
+[
+    {
+      "lesson_num": 1,
+      "title": "Budget",
+      "quiz_num": 1,
+      "subtitle": "Check Your Understanding!",
+      "topics": [
+        {
+          "name": "Actual Car Price",
+          "detail": "It refers to the total amount of money you actually pay when you purchase a car. This include taxes, registration fees, document processing fees, dealer options, and delivery fees. In the case of used cars, vehicle inspection or repair costs may be added."
+        },
+        {
+          "name": "Car Maintenance Fee",
+          "detail": "It refers to the ongoing costs required to keep a car in good working condition after purchase. These costs include routine services like oil changes, tire rotations, brake pad replacements, fluid top-ups, air filter replacements, and more."
+        },
+        {
+          "name": "Car Insurance",
+          "detail": "A contract between you and an insurance company that provides financial protection in the event of accidents, theft, or damage involving your vehicle. In most places, it’s legally required to drive."
+        },
+        {
+          "name": "Gas Fee",
+          "detail": "It refers to the ongoing cost of fueling your car, and it’s one of the largest day-to-day expenses of owning a gasoline or diesel vehicle. The total gas fee depends on several factors, including fuel efficiency (MPG or km/L), current fuel prices, your driving habits, and average mileage per month."
+        },
+        {
+          "name": "Car Tax",
+          "detail": "It refers to the government-imposed taxes and fees associated with owning and operating a vehicle. These taxes vary by country, state, or region, and can include sales tax (at purchase), annual registration fees, road tax, and sometimes environmental or luxury taxes."
+        }
+      ]
+    },
+    {
+        "lesson_num": 2,
+        "title": "Car Type",
+        "quiz_num": 2,
+        "subtitle": "Different cars fit different lives. Find out what suits yours",
+        "topics": [
+          {
+            "name": "Sedan",
+            "image": "https://di-uploads-pod27.dealerinspire.com/woodhousehyundaiofomaha/uploads/2022/01/2022-sonata-1024x768.jpg",
+            "points": ["Reliable driving", "Adequate space"]
+          },
+          {
+            "name": "SUV",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ-N6SEPoQ4YlgpbOKPY6GiijLxjfSrAPG0w&s",
+            "points": ["Large load space", "High visibility", "Offloadable"]
+          },
+          {
+            "name": "Hatchback",
+            "image": "https://www.usatoday.com/gcdn/-mm-/221944ead94f36fb867f16da5b1d7db08ab24309/c=0-476-4926-3259/local/-/media/2017/02/08/DetroitFreePress/DetroitFreePress/636221808508481702-2018-Hyundai-Elantra-GT-03.JPG",
+            "points": ["Good mobility", "Optimized for city driving"]
+          }
+        ]
+      },
+      {
+        "lesson_num": 3,
+        "title": "Fuel Type",
+        "quiz_num": 3,
+        "subtitle": "Know Your Fuel, Drive Smart!",
+        "topics": [
+          {
+            "name": "Gasoline",
+            "pros": ["Widely used", "Easy to maintain"],
+            "cons": ["High Fuel cost", "CO2 emissions"]
+          },
+          {
+            "name": "Diesel",
+            "pros": ["High long range drive efficiency"],
+            "cons": ["Noise regulations", "Environmental regulations"]
+          },
+          {
+            "name": "Hybrid",
+            "pros": ["Best fuel efficiency", "Low noise level"],
+            "cons": ["Battery cost"]
+          },
+          {
+            "name": "EV",
+            "pros": ["Low fuel cost", "Eco-friendly"],
+            "cons": ["Need of charging station"]
+          }
+        ]
+      },
+      {
+        "lesson_num": 4,
+        "title": "Safety Features",
+        "subtitle": "Drive Safe, Choose Smart",
+        "quiz_num": 4,
+        "image": "https://autoimage.capitalone.com/cms/Auto/assets/images/1265-feat-18-common-car-safety-features.jpg",
+        "topics": [
+          {
+            "name": "Automatic Emergency Braking",
+            "description": "Automatic braking in case of forward collision"
+          },
+          {
+            "name": "Lane Keep Assist",
+            "description": "Correction of steering in case of lane departure"
+          },
+          {
+            "name": "Rearview Camera",
+            "description": "Provide rear car and pedestrian vision when reversing"
+          }
+        ]
+      },
+      {
+        "lesson_num": 5,
+        "title": "Design & Interior",
+        "subtitle": "Things to Consider!",
+        "quiz_num": 5,
+        "topics": [
+          {
+            "name": "Seat Comfort",
+            "image": "https://www.carsoup.com/blog/content/images/2024/04/iStock-1454431481.jpg",
+            "explanation": "The seating of the seats has an important impact on drivers who are forced to stay in the car for a long time. The ergonomically designed seats reduce fatigue in key areas, such as the back, buttocks, and legs, and help you maintain a stable posture when driving long distances. In particular, lumbar support, headrest control, backrest tilt control, and proper cushion density are factors that directly affect comfort. If you are driving for more than 30 minutes a day or planning to drive long distances on a regular basis, it is recommended that you experience the structure and function of the seats firsthand."
+          },
+          {
+            "name": "Cabin Space",
+            "image": "https://static0.carbuzzimages.com/wordpress/wp-content/uploads/2024/08/hyundai-santa-fe-3.jpg",
+            "explanation": "The interior space is closely related to the lifestyle of the vehicle user, and the seating arrangement and composition of the loading space have practical implications for passenger and cargo accommodation. Sufficient head and legroom, and trunk space for adult passengers are important evaluation factors, especially when there are many family uses, trips, and leisure activities. In addition, flexible space utilization, such as rear seat folding or two-row sliding, allows for more effective use of the interior space of the vehicle."
+          },
+          {
+            "name": "Dashboard Layout",
+            "image": "https://miro.medium.com/v2/1*4EsJxUhS4w73rtxlDYK2rQ.jpeg",
+            "explanation": "The dashboard is an area where the gaze frequently stays while driving, requiring intuitive information delivery and manipulation. The location and arrangement of instrument panels, infotainment systems, and air conditioning system manipulation should be designed to provide quick access to functions while minimizing distraction of vision while driving. Although touchscreen-based digital dashboards have become more common recently, the main functions still provided as physical buttons are often more stable in terms of operation. Driver-centric layout is a key factor in ensuring both safety and convenience."
+          },
+          {
+            "name": "Tech Features",
+            "image": "https://extramile.thehartford.com/wp-content/uploads/2019/02/car-tech.jpg",
+            "explanation": "Modern vehicles are increasing the convenience and satisfaction of drivers through various technology convenience functions. Key features include wireless charging systems, Apple CarPlay and Android auto interworking, touchscreen based infotainment systems, Bluetooth, and voice command functions. These functions greatly improve the interworking with smart devices while driving, access to information, and convenience of multimedia environments. In particular, the compatibility of functions, response speed, and intuition of operation are important criteria that determine the actual satisfaction of technology functions."
+          }
+        ]
+      }
+    ]

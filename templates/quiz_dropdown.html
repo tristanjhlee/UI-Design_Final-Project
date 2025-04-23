@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz {{ question_num }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+{% include 'navbar.html' %}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-5">● {{ question.question }}</h2>
+
+    <form method="POST" action="{{ url_for('submit_quiz', quiz_num=question_num) }}">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label class="form-label fw-bold">1. What is your usual driving environment?</label>
+                    <select class="form-select" name="driving_env" required>
+                        <option value="" disabled selected>Select option</option>
+                        {% for option in question.options.driving_env %}
+                        <option value="{{ option }}">{{ option }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label fw-bold">2. How many people do you ride with?</label>
+                    <select class="form-select" name="riders" required>
+                        <option value="" disabled selected>Select option</option>
+                        {% for option in question.options.riders %}
+                        <option value="{{ option }}">{{ option }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="text-end">
+                    <button type="submit" class="btn btn-success btn-lg">Next</button>
+                </div>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <img src="https://imagescdn.dealercarsearch.com/DealerImages/2182/saved/2bf58e56.jpg" class="img-fluid" alt="Car Types" style="max-height: 400px;">
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

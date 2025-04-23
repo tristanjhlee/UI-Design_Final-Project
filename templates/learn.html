@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ lesson["title"] }} - {{ lesson["subtitle"] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-5">● {{ lesson["subtitle"] }}</h2>
+
+    {% if lesson["title"] == "Budget" %}
+    <!-- Budget Page Layout -->
+    <div class="row row-cols-1 row-cols-md-5 g-4 text-center">
+        {% for topic in lesson["topics"] %}
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ topic.name }}</h5>
+                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#topic{{ loop.index0 }}">
+                        Details
+                    </button>
+                    <div id="topic{{ loop.index0 }}" class="collapse mt-2">
+                        {{ topic.detail }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% elif lesson["title"] == "Car Type" %}
+    <!-- Car Type Page Layout -->
+    <div class="row text-center justify-content-center">
+        {% for topic in lesson["topics"] %}
+        <div class="col-md-4 d-flex flex-column align-items-center mb-5">
+            <div class="card shadow-sm" style="width: 100%; max-width: 300px;">
+                <img src="{{ topic.image }}" alt="{{ topic.name }}" 
+                     class="card-img-top" 
+                     style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ topic.name }}</h5>
+                    <ul class="list-unstyled">
+                        {% for point in topic.points %}
+                        <li>- {{ point }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% elif lesson["title"] == "Fuel Type" %}
+    <!-- Fuel Type Page Layout -->
+    <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Fuel Type</th>
+                    <th>Pros</th>
+                    <th>Cons</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for topic in lesson["topics"] %}
+                <tr>
+                    <td>{{ topic.name }}</td>
+                    <td>
+                        <ul class="list-unstyled mb-0">
+                            {% for pro in topic.pros %}
+                            <li>- {{ pro }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="list-unstyled mb-0">
+                            {% for con in topic.cons %}
+                            <li>- {{ con }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% elif lesson["title"] == "Safety Features" %}
+    <!-- Safety Features Page Layout (from JSON) -->
+    <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+            <img src="{{ lesson.image }}" alt="Safety Features Diagram" class="img-fluid" style="max-height: 400px;">
+        </div>
+        <div class="col-md-6">
+            {% for topic in lesson.topics %}
+                <h4><u>{{ topic.name }}</u></h4>
+                <p>{{ topic.description }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    
+    {% elif lesson["title"] == "Design & Interior" %}
+    <!-- Design & Interior Page Layout -->
+    <div class="row row-cols-1 row-cols-md-4 g-4 text-center">
+        {% for topic in lesson.topics %}
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ topic.name }}</h5>
+                    <img src="{{ topic.image }}" class="img-fluid mb-2" 
+                         style="height: 200px; object-fit: cover; cursor: pointer;" 
+                         onclick="toggleExplanation({{ loop.index0 }})">
+                    <p id="explanation-{{ loop.index0 }}" class="collapse mt-2">{{ topic.explanation }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script>
+    function toggleExplanation(index) {
+        const el = document.getElementById('explanation-' + index);
+        if (el.classList.contains('collapse')) {
+            el.classList.remove('collapse');
+        } else {
+            el.classList.add('collapse');
+        }
+    }
+    </script>
+
+    {% endif %}
+    {% if lesson.quiz_num is defined %}
+    <div class="text-end mt-5">
+        <a href="{{ url_for('quiz', quiz_num=lesson.quiz_num) }}" class="btn btn-success">Next</a>
+    </div>
+    {% else %}
+    <div class="alert alert-warning text-center mt-5">
+        <strong>Oops!</strong> No quiz connected to this lesson.
+    </div>
+    {% endif %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

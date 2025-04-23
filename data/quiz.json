@@ -1,0 +1,124 @@
+[
+    {
+        "quiz_num": 1,
+        "type": "drag_match",
+        "question": "Match the description to the correct topic.",
+        "topics": ["Actual Car Price", "Car Maintenance Fee", "Car Insurance", "Gas Fee", "Car Tax"],
+        "descriptions": [
+        "It refers to the total amount of money you actually pay when you purchase a car. This includes taxes, registration fees, document processing fees, dealer options, and delivery fees.",
+        "It refers to the ongoing costs required to keep a car in good working condition after purchase. These costs include oil changes, tire rotations, brake pad replacements, fluid top-ups, and air filter replacements.",
+        "A contract between you and an insurance company that provides financial protection in the event of accidents, theft, or damage involving your vehicle.",
+        "It refers to the ongoing cost of fueling your car, and it’s one of the largest day-to-day expenses of owning a gasoline or diesel vehicle.",
+        "It refers to government-imposed taxes and fees associated with vehicle ownership, including sales tax, registration fees, and road tax."
+    ],
+    "correct": [
+        "Actual Car Price",
+        "Car Maintenance Fee",
+        "Car Insurance",
+        "Gas Fee",
+        "Car Tax"
+    ]
+    },
+    {
+        "quiz_num": 2,
+        "type": "dropdown",
+        "question": "What Car Type Matches You?",
+        "options": {
+            "driving_env": ["Downtown", "Highway", "Offroad"],
+            "riders": ["Less than two", "3~5", "5 or more"]
+        },
+        "rules": {
+        "Downtown": {
+            "Less than two": "Hatchback",
+            "3~5": "Sedan",
+            "5 or more": "SUV"
+        },
+        "Highway": {
+            "Less than two": "Sedan",
+            "3~5": "Sedan",
+            "5 or more": "SUV"
+        },
+        "Offroad": {
+            "Less than two": "SUV",
+            "3~5": "SUV",
+            "5 or more": "SUV"
+        }
+    }
+    },
+    {
+        "quiz_num": 3,
+        "type": "table_drag_match",
+        "question": "Match each fuel type with its correct pros and cons.",
+        "options": ["Gasoline", "Diesel", "Hybrid", "EV"],
+        "pros": [
+        "Widely used<br>Easy to maintain",
+        "High long range drive efficiency",
+        "Best fuel efficiency<br>Low noise level",
+        "Low fuel cost<br>Eco-friendly"
+      ],
+      "cons": [
+        "High Fuel cost<br>CO2 emissions",
+        "Noise regulations<br>Environmental regulations",
+        "Battery cost",
+        "Need of charging station"
+      ],
+      "correct_order": {
+        "0": "Gasoline",
+        "1": "Diesel",
+        "2": "Hybrid",
+        "3": "EV"
+      }
+    },
+    {
+        "quiz_num": 4,
+        "type": "connect_line",
+        "title": "Check Your Understanding!",
+        "left": [
+            "Automatic Emergency Braking",
+            "Lane Keep Assist",
+            "Rearview Camera"
+        ],
+        "right": [
+            "Automatic braking in case of forward collision",
+            "Correction of steering in case of lane departure",
+            "Provide rear car and pedestrian vision when reversing"
+        ],
+        "correct": {
+            "Automatic Emergency Braking": "Automatic braking in case of forward collision",
+            "Lane Keep Assist": "Correction of steering in case of lane departure",
+            "Rearview Camera": "Provide rear car and pedestrian vision when reversing"
+        }
+    },
+    {
+        "quiz_num": 5,
+        "title": "Choose Your Style!",
+        "subtitle": "What type of style/design do you Prefer?",
+        "type": "design_choice",
+        "options": [
+            {
+            "label": "Minimal/Simple",
+            "brands": "Tesla / Hyundai",
+            "images": [
+                "https://www.electrifying.com/files/OzF9FV4Xo5kq3ZAK/NewModelY_74.jpg",
+                "https://di-uploads-pod27.dealerinspire.com/fairfaxhyundai/uploads/2024/08/Large-62195-2025Elantra-2-1-min-1024x609.jpg"
+                ]
+            },
+            {
+            "label": "Functional/Mechanical",
+            "brands": "Toyota / Honda",
+            "images": [
+                "https://www.passporttoyota.com/blogs/716/wp-content/uploads/2020/04/Corolla_Hybrid_013_E8752A42C66E156C23136C861E7A6BAF9B59801D-1500x900.jpg",
+                "https://di-uploads-pod1.dealerinspire.com/saffordbrownhondaarlington/uploads/2023/12/ezgif.com-avif-to-jpg-converted-2.jpg"
+            ]
+            },
+            {
+            "label": "Luxurious/Sensual",
+            "brands": "Mercedes / Genesis",
+            "images": [
+                "https://media.ed.edmunds-media.com/mercedes-benz/s-class/2025/oem/2025_mercedes-benz_s-class_sedan_amg-s-63-e-performance_fq_oem_1_1280.jpg",
+                "https://static.independent.co.uk/2021/12/01/11/newFile-10.jpg"
+            ]
+        }
+    ]
+}
+]
