@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter';
     margin: 20px;
 }
 
@@ -18,4 +18,16 @@ button {
 
 .incorrect {
     color: red;
+}
+
+.custom-navbar {
+    background-color: #cceeff;
+    border-bottom: 1px solid #99ccff;
+}
+.custom-navbar .nav-link {
+    color: #003366 ;
+    font-weight: 500;
+}
+.custom-navbar .nav-link:hover {
+    color: #005580;
 }

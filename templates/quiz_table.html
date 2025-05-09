@@ -69,9 +69,10 @@
 
         <input type="hidden" name="matchResult" id="matchResult">
 
-        <div class="text-end mt-4">
+        <div class="d-flex justify-content-between mt-4">
+            <a href="{{ url_for('quiz', quiz_num=question_num - 1) }}" class="btn btn-secondary btn-lg">Previous</a>
             <button type="submit" class="btn btn-success btn-lg">Submit</button>
-        </div>
+        </div>        
     </form>
 </div>
 

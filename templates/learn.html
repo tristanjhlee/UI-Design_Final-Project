@@ -34,7 +34,6 @@
     </div>
 
     {% elif lesson["title"] == "Car Type" %}
-
     <div class="row text-center justify-content-center">
         {% for topic in lesson["topics"] %}
         <div class="col-md-4 d-flex flex-column align-items-center mb-5">
@@ -56,7 +55,6 @@
     </div>
 
     {% elif lesson["title"] == "Fuel Type" %}
-
     <div class="table-responsive">
         <table class="table table-bordered text-center align-middle">
             <thead class="table-light">
@@ -91,7 +89,6 @@
     </div>
 
     {% elif lesson["title"] == "Safety Features" %}
-
     <div class="row align-items-center">
         <div class="col-md-6 text-center">
             <img src="{{ lesson.image }}" alt="Safety Features Diagram" class="img-fluid" style="max-height: 400px;">
@@ -105,7 +102,6 @@
     </div>
     
     {% elif lesson["title"] == "Design & Interior" %}
-
     <div class="row row-cols-1 row-cols-md-4 g-4 text-center">
         {% for topic in lesson.topics %}
         <div class="col">
@@ -121,28 +117,28 @@
         </div>
         {% endfor %}
     </div>
-
     <script>
     function toggleExplanation(index) {
         const el = document.getElementById('explanation-' + index);
-        if (el.classList.contains('collapse')) {
-            el.classList.remove('collapse');
-        } else {
-            el.classList.add('collapse');
-        }
+        el.classList.toggle('collapse');
     }
     </script>
+    {% endif %}
 
-    {% endif %}
-    {% if lesson.quiz_num is defined %}
-    <div class="text-end mt-5">
-        <a href="{{ url_for('quiz', quiz_num=lesson.quiz_num) }}" class="btn btn-success">Next</a>
+    <!-- Navigation Buttons -->
+    <div class="d-flex justify-content-between mt-5">
+        {% if lesson.lesson_num > 1 %}
+        <a href="{{ url_for('learn', lesson_num=lesson.lesson_num - 1) }}" class="btn btn-secondary btn-lg">Previous</a>
+        {% else %}
+        <span></span>
+        {% endif %}
+
+        {% if lesson.lesson_num < 5 %}
+        <a href="{{ url_for('learn', lesson_num=lesson.lesson_num + 1) }}" class="btn btn-success btn-lg">Next</a>
+        {% elif lesson.lesson_num == 5 %}
+        <a href="{{ url_for('home') }}" class="btn btn-primary btn-lg">Return to Home</a>
+        {% endif %}
     </div>
-    {% else %}
-    <div class="alert alert-warning text-center mt-5">
-        No quiz connected to this lesson.
-    </div>
-    {% endif %}
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
