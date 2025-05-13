@@ -45,6 +45,13 @@
             </div>
         </div>
     </form>
+    <div class="progress mt-5" style="height: 25px;">
+  <div class="progress-bar progress-bar-striped bg-info fw-bold" 
+       role="progressbar" 
+       style="width: {{ (question_num / 5 * 100)|int }}%;">
+    Quiz {{ question_num }} of 5
+  </div>
+</div>
 </div>
 </body>
 </html>
